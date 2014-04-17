@@ -1,0 +1,14 @@
+#!/bin/bash
+
+i='-ramdisk'
+port=3307
+
+mysqladmin -u mysql -h 127.0.0.1 -P$port shutdown
+
+umount /var/lib/mysql$i
+rm -rf /var/lib/mysql$i
+
+rm -rf /var/log/mysql$i
+
+rm -rf /etc/mysql$i
+cp -R /etc/mysql/ /etc/mysql$i

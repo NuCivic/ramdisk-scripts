@@ -86,4 +86,4 @@ end
 puts 'Starting mysql instance on port 3307 using ramdisk as data folder storage. Also creating test db'
  
 # spawn('mysqld_safe --defaults-file=' + cnf_path + ' --general_log=1 --general_log_file=' + ramdisk_path + '/general_log.log > /dev/null && mysqladmin -u root -h 127.0.0.1 -P3307 create test')
-spawn('mysqld_safe --defaults-file=' + cnf_path + ' > /dev/null && mysqladmin -u root -h 127.0.0.1 -P3307 create test')
+spawn('mysqld_safe --defaults-file=' + cnf_path + ' > /dev/null && mysqladmin -u root -h 127.0.0.1 -P3307 create drupal_test')
